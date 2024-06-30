@@ -1,0 +1,14 @@
+1. Download Ollama
+- pip install ollama
+
+2. Download the model (llama3)
+- ollama pull llama3
+
+3. Setup the following env variables
+export OLLAMA_HOST="127.0.0.1:5000"
+export OLLAMA_MODELS="$HOME/.ollama/models"
+
+4. Run the api in a terminal with "ollama serve"
+
+
+5.
