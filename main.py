@@ -1,5 +1,8 @@
 import threading
+import time
 from scripts.scriptgen import generate_script
+from scripts.render import render_vid
+print("Initializing Modlels...")
 from TTS.api import TTS
 
 def print_stream(generator):
@@ -36,9 +39,17 @@ def main():
 
     output_file = "output.wav"
 
-    speaker = "p225"
+    speaker = "p226"
     generate_audio(script_text, output_file, speaker)
     print("\nStream completed. Audio saved to:", output_file)
+
+
+    print("\nNow onto rendering the video")
+
+    render_vid()
+    print("\nVideo Successfully rendered")
+    print("\nUse vlc final_video.mp4 to view")
+
 
 if __name__ == "__main__":
     main()
